@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+
+
+
+
+    <style>
+
+        *{font-family: 'Single Day', cursive;
+    color: rgb(88, 4, 37);
+    }
+
+        fieldset{
+            border-color: pink;
+
+        }
+
+        textarea{
+            border-color: orange;
+        }
+
+        input{
+            border: 1px solid;
+            border-color: orange;
+        }
+
+        button,
+        button::after {
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        }
+
+        button{
+            background-color: rgb(255, 171, 162);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            width: 100px;
+            height: 40px;
+            font-size: 120%;
+            font-weight: bold; 
+        }
+
+        button::before,
+        button::after {
+        background:yellow;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        }
+
+button:hover {
+  color: rgb(214, 3, 144);
+}
+
+
+input[type=file]::file-selector-button {
+  border: 2px solid #ffffff;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: #fcc3c5;
+  transition: 1s;
+  color: rgb(255, 255, 255);
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: salmon;
+  border: 2px solid white;
+}
+
+</style>
+    
+
+
+    <title>종합실습문제2</title>
+</head>
+<body>
+    <center>
+    <h1>회원가입</h1></center>
+    <form>
+        <fieldset>
+            <fieldset>
+                <legend>필수 입력 사항</legend>
+                    <table>
+                        <tr>
+                            <th width="120px"> <label for="id">ID</label></th>
+                            <td><input type="text" name="id" id="id" placeholder="아이디 10글자 이내" style="width: 250px;" required></td>
+                            <td><button style="width: 80px; height: 20px; font-size: 100%; font-weight: lighter;">중복확인</button></td>
+                        </tr>
+                        <tr>
+                            <th> <label for="pwd">비밀번호</label></th>
+                            <td><input type="password" name="pwd" id="pwd" style="width: 250px;"
+                                placeholder="영문, 숫자, 특수문자 포함 8자 이상" required></td>
+                        </tr>
+                        <tr>
+                            <th> <label for="pwd1">비밀번호 확인</label></th>
+                            <td><input type="password" name="pwd" id="pwd1" style="width: 250px;" required></td>
+                        </tr>
+                        <tr>
+                            <th width="100px"> <label for="mail">Email</label></th>
+                            <td><input type="email" name="mail" id="mail" style="width: 250px;" required></td>
+                            <td>
+                                <select name="mail" id="mail" style="width: 80px;">
+                                    <option selected>직접입력</option>
+                                    <option value="@naver.com">@naver.com</option>
+                                    <option value="@gmail.com">@gmail.com</option>
+                                    <option value="@kh.com">@kh.com</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+            </fieldset>
+
+            <fieldset>
+                
+                <legend>추가 정보</legend>
+                
+                    <label for="pic"> 프로필 사진 : </label>
+                    <input type="file" id="pic">
+                    <p></p>
+
+                    <label> 성별 : </label>
+                    <label><input type="radio" name="gender" value="F" checked>남자</label>
+                    <label><input type="radio" name="gender" value="M">여자</label>
+                    <p></p>
+
+                <label for="dateIn">생년월일 : </label>
+                <input type="date" name="dateIn" id="dateIn">
+
+                <p></p>
+                    <label for="hb"> 취미</label><br>
+                    <label><input type="checkbox" name="hobby" id="hb" value="baseball">야구</label>
+                    <label><input type="checkbox" name="hobby" id="hb" value="baseball">농구</label>
+                    <label><input type="checkbox" name="hobby" id="hb" value="soccer">축구</label><br>
+                    <label><input type="checkbox" name="hobby" id="hb" value="study" checked>공부</label>
+                    <label><input type="checkbox" name="hobby" id="hb" value="music">음악감상</label><br>
+                    <label><input type="checkbox" name="hobby" id="hb" value="ect">기타<input type="text"></label>
+                <p></p>
+                <label for="introduce">자기소개</label> <br>
+                <textarea name="introduce" id="introduce" cols="45" rows="3" style="resize: none;"></textarea>
+
+                <p></p>
+                <center>
+                <!-- <input type="submit" style="border: 1px solid; border-color: rgb(247, 96, 79); 
+                background-color: salmon; border-radius: 4px; color:white; width: 90px; 
+                height: 40px; font-weight: bold; font-size:120%;" 
+                value="회원가입">
+                <input type="reset" value="다시입력">
+                <input type="button" value="이전으로"> -->
+
+                <button type="submit">회원가입</button>
+                <button type="reset">다시입력</button>
+                <button type="button">이전으로</button>
+                </center>
+            </fieldset>
+        </fieldset>
+    </form>
+</body>
+</html>

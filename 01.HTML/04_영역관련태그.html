@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영역 관련 태그</title>
+    <style>
+        div{
+            border: 1px solid brown;
+            /* width: 100px;
+            height: 100px; */
+        }
+
+        span{
+            border: 1px solid hotpink;
+            <!--인라인요소이기 때문에 넓이, 높이 먹히지 않음-->
+            /* width: 200px;
+            height: 200px; */
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        블럭 요소
+            - 한 줄 단위로 영역을 차지하는 요소(width가 100%)
+            - 새로운 블록요소는 새로운 라인에 영역이 잡힌다. (두 블록 간에는 겹치는 일이 없다.)
+        인라인 요소
+            - 내용에 해당하는 부분만 영역을 차지하는 요소
+            - 줄 바꿈이 적용되지 않아 옆으로 영역이 잡힌다. (다음 줄로 넘기고자 한다면 직접 br태그를 넣어줘야 한다.)
+            - span, label, ...
+        ※ 용도에 맞춰서 사용하면 된다. 
+
+        <div> : 블록 요소의 태그로 레이아웃 분할을 위해 사용한다. 
+        <p>   : 블록 요소의 태그로 문단영역을 지정하는 용도로 사용한다. 
+        <span>: 인라인 요소의 태그로 컨텐츠를 감싸는 역할을 하는 태그이다.   
+    -->
+    <h1>영역 관련 태그</h1>
+    <hr>
+    <h3>div 태그와 span태그의 차이1</h3>
+    <h4>div 태그</h4>
+
+    <p>
+        div 태그 영역은 이미 존재하는 태그 다음 줄에 영역이 설정된다.
+        (block 요소 : 공간을 수직으로 분할) 
+    </p>
+
+    <div>
+        첫번째 영역
+    </div>
+    <div>
+        두번째 영역
+    </div>
+    <div>
+        세번째 영역
+    </div>
+
+    <h4>span 태그</h4>
+    <p>
+        span태그 영역은 줄바꿈이 일어나지 않고 옆으로 영역이 설정된다
+    </p>
+    <span>첫 번째 영역</span>
+    <span>두 번째 영역</span>
+    <span>세 번째 영역</span>
+    <span>네 번째 영역</span>
+    <br><br>
+    <hr>
+    <h3>div 태그와 span 태그의 차이2</h3>
+    <h4>div 태그 : 사각형 박스로 영역을 지정</h4>
+    <div>
+        동해물과 백두산이 마르고 닳도록 <br>
+        하느님이 보우하사 우리나라 만세. <br>
+    </div>
+
+    <p></p>
+    <h4>span 태그 : 문장 단위로 영역을 지정</h4>
+    <span>
+        동해물과 백두산이 마르고 닳도록 <br>
+        하느님이 보우하사 우리나라 만세. <br>
+        무궁화 삼천리 화려 강산 대한 사람 대한으로 우리 나라 만세
+    </span>
+
+    <hr>
+    <h3>iframe</h3>
+    <iframe src="../04_영역관련태그 copy.html" width="650px" height="650px"></iframe>
+    <!-- 동일한 위치가 아닐 경우 ..(상위 위치)로 넣는다.  -->
+<!--
+    절대 경로를 이용한 파일 찾기(.:현재위치, ..:상위위치)
+    <iframe src="D:\front\04_영역관련태그 copy.html" width="650px" height="650px"></iframe>
+    
+    상대 경로를 이용한 파일 찾기
+    <iframe src="../04_영역관련태그 copy.html" width="650px" height="650px"></iframe>
+-->
+
+    <p></p>
+    <iframe width="1000" height="500" src="https://www.youtube.com/embed/N8uk1ipLYFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

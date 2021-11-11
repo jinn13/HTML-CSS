@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 우선순위</title>
+    <style>
+        h1{
+            color: hotpink;
+        }
+
+        h1{
+            background-color: seagreen;
+            color: red;
+        }
+
+        #test1{
+            background-color: hotpink;
+        }
+
+        .test1{
+            background-color: yellowgreen; /* 적용안됨 */
+            color: white;
+        }
+
+        div{
+            background-color: blue;
+            width: 100px;
+            height: 80px;
+        }
+
+        #test2{
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            color: black;
+        }
+
+        .test2{
+            background-color: black;
+            color: white;
+        }
+
+        p{
+            background-color: springgreen !important;
+            color: white;
+            font-size: x-large;
+        }
+
+
+    </style>
+</head>
+<body>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <h1>선택자 우선순위</h1>
+    <p>
+        기본적으로 CSS속성은 위에서부터 아래로 적용이 되지만, <br>
+        같은 태그에 다양한 선택자로 CSS 속성이 설정된 경우에는 우선순위에 따라 스타일이 적용된다. 
+        <br><br>
+
+        태그선택자 &lt; 클래스 선택자 &lt; 아이디 선택자 &lt; 인라인 선택자 &lt; !important <br>
+        (오른쪽으로 갈 수록 우선순위가 높다)  
+    </p>
+
+
+    <h3>선택자 우선 순위 테스</h3>
+    <div id="test1" class="test1" style="background-color: violet;">우선순위 테스트 1</div>
+
+    <p id="test2" class="test2" style="background-color: tomato;">우선 순위 테스트 2</p>
+
+    <div>div</div>
+
+</body>
+</html>

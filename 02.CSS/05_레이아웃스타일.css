@@ -1,0 +1,294 @@
+/* 기본 스타일 테스트 */
+body {
+  height: 2000px;
+}
+
+.size-test {
+  border: 2px solid red;
+}
+
+#fixed-size {
+  width: 200px;
+  height: 200px;
+}
+
+#variable-size {
+  width: 50%;
+  height: 30px;
+}
+/* 부모(바디)의 높이를 기준으로 자식의 높이도 변경되는것임. 
+바디 높이의 10%, 20%이므로 바디가 작으면 제일 작은 수치로 표시됨  */
+
+.display {
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  color: white;
+}
+
+#area1 {
+  background-color: red;
+}
+
+#area2 {
+  background-color: orange;
+}
+
+#area3 {
+  background-color: yellow;
+}
+
+#area4 {
+  background-color: green;
+}
+
+#area5 {
+  background-color: blue;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.display-block {
+  display: block;
+}
+
+/* 테두리 스타일 테스트 */
+.border {
+  width: 100px;
+  height: 100px;
+  border: px;
+}
+
+#border-test1 {
+  border-style: none;
+}
+
+#border-test2 {
+  border-style: hidden;
+  box-shadow: -10px -10px 10px 10px gray inset;
+}
+
+#border-test3 {
+  border-style: dotted;
+}
+
+#border-test4 {
+  border-style: dashed;
+  border-top-color: pink;
+  /* 특정 선만 색 변경도 가능하다! */
+}
+
+#border-test5 {
+  border-style: double;
+  border-color: red;
+}
+
+#border-test6 {
+  border-style: groove;
+  border-top-left-radius: 10px 20px;
+  box-shadow: ;
+}
+
+#border-test7 {
+  border-style: inset;
+  border-bottom-right-radius: 50px;
+}
+
+#border-test8 {
+  border-style: outset;
+}
+
+#border-test9 {
+  border-style: solid;
+}
+
+#border-test10 {
+  border-style: ridge;
+}
+
+/* 여백 스타일 테스트 */
+.space {
+  width: 100px;
+  height: 100px;
+  background-color: wheat;
+}
+
+#padding1 {
+  padding: 20px;
+}
+
+#padding2 {
+  padding-top: 50px;
+  padding-right: 100px;
+}
+
+#margin1 {
+  margin: 50px;
+}
+
+#margin2 {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+/* 포지셔닝 테스트 */
+.outer {
+  /* width: 300px;
+    height: 300px; */
+  position: relative;
+  /* static을 기준으로 이동시키게 해주는것이 relative */
+  /* top: 100px;
+    left: 100px; */
+  /* border: 1px solid; */
+  background-color: pink;
+}
+
+#first {
+  width: 300px;
+  height: 300px;
+  background-color: yellow;
+}
+
+#second {
+  position: absolute;
+  /* 아예 아무것도 안주면 원래위치지만 위치 설정하면 무조건 움직임 */
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  height: 200px;
+  background-color: yellowgreen;
+}
+
+#third {
+  position: absolute;
+  width: 100px;
+  top: 100px;
+  left: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+/* 고정위치 테스트 */
+#fixed-area {
+  width: 100px;
+  height: 100px;
+  background-color: indigo;
+  /* position: fixed; */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  left: 50px;
+}
+
+/* visibility 테스트 */
+.visibility {
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+  margin: 5px;
+}
+
+#v-test1 {
+  background-color: hotpink;
+}
+
+#v-test2 {
+  visibility: hidden;
+  display: none;
+  background-color: beige;
+}
+
+#v-test3 {
+  background-color: skyblue;
+}
+
+.z-test {
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
+  position: absolute;
+}
+
+#z-outer {
+  position: relative;
+  height: 310px;
+}
+
+#z1 {
+  background-color: seagreen;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
+
+#z2 {
+  background-color: red;
+  top: 50px;
+  left: 50px;
+  z-index: 4;
+}
+
+#z3 {
+  background-color: violet;
+  top: 100px;
+  left: 100px;
+}
+
+/* float 테스트 */
+.float-test {
+  border: 1px solid;
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 3px;
+  margin-bottom: 10px;
+}
+
+/* 다단 스타일 테스트 */
+.column-wrap {
+  border: 1px solid;
+  height: 250px;
+  overflow: scroll;
+}
+
+#column1 {
+  column-width: 300px;
+  column-gap: 50px;
+}
+
+#column2 {
+  column-count: 5;
+  column-rule-style: dashed;
+  column-rule-color: orangered;
+}
+
+#column2 > h4 {
+  column-span: all;
+}
+
+/* 테이블 스타일 테스트 */
+table {
+  caption-side: bottom;
+  width: 300px;
+  height: 400px;
+  border: 1px solid;
+  /* border-collapse: collapse; */
+  border-spacing: 30px;
+  empty-cells: hide;
+  table-layout: fixed;
+  word-break: break-all;
+}
+
+td {
+  border: 1px solid;
+  width: 80px;
+  height: 100px;
+  text-align: center;
+  vertical-align: bottom;
+}

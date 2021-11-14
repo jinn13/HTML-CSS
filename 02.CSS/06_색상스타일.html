@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색상 스타일</title>
+    <style>
+        body{
+            /* background-color: blueviolet; */
+            /* background-color: #a1b809; */
+            /* background-color: rgb(200, 90, 90); */
+            /* background-color: rgba(255, 80, 80, 0.5); */
+            background-color: hsl(60, 100%, 50%, .3);
+        }
+
+        #div-bg{
+            width: 50%;
+            background-color: whitesmoke;
+        }
+
+        .div-clip{
+            background-color: white;
+            margin: 30px;
+            padding: 30px;
+            width: 40%;
+            border: 15px dashed rgba(0, 0, 0, 0.2);
+        }
+
+        #div-clip1{
+            
+            background-clip: border-box;
+        }
+
+        #div-clip2{
+            background-clip: padding-box;
+        }
+
+        #div-clip3{
+            background-clip: content-box;
+        }
+
+        #div-bg-img{
+            border: 15px solid rgba(0, 0, 0, 0.2);
+            width: 70%;
+            height: 800px;
+            padding: 50px;
+            background-image: url("../resources/image/bgsample.PNG");
+
+            /* 이미지 반복 설정 */
+            /* background-repeat: repeat; - 기본값 */
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat-y; */
+            background-repeat: no-repeat;
+
+            /* 이미지 크기 설정 */
+            /* background-size: auto; */
+            /* background-size: contain; */
+            /* background-size: cover; */
+            /* background-size: 300px 200px; */
+            /* background-size: 100% 100%; */
+
+            /* 이미지의 위치 설정 */
+            /* background-position: left top; */
+            /* background-position: right top; */
+            /* background-position: center top; */
+            /* background-position: left center; */
+            /* background-position: right center; */
+            /* background-position: center; */
+            /* background-position: left bottom; */
+            /* background-position: right bottom; */
+            /* background-position: center bottom; */
+            /* background-position: 100px 100px; */
+            /* background-position: 50% 50%; */
+
+            /* 이미지의 배치 기준 설정 */
+            /* background-origin: border-box; */
+            background-origin: padding-box;
+            /* background-origin: content-box; */
+
+            /* 이미지를 고정하도록 설정 */
+            /* background-attachment: fixed; */
+
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <br><br><br><br><br><br>
+    <h1>색상 스타일</h1>
+    <hr>
+    <h2>background-color</h2>
+    <div id="div-bg">
+        SK텔레콤이 통신사업을 하는 'SK텔레콤'과 반도체 및 정보통신기술(ICT) 투자를 맡는 'SK스퀘어'로 분할해 1일 새롭게 출범한다. 1984년 한국이동통신으로 설립된 지 37년 만에 이뤄지는 역사적인 기업구조 재편이다.
+
+1일 통신업계에 따르면 SK텔레콤은 이날 이사회를 열고 존속법인 SK텔레콤과 신설법인 SK스퀘어의 새 최고경영자를 선임한다.
+
+앞서 SK텔레콤은 지난달 임시 주주총회에서 통신 분야를 맡는 존속법인 SK텔레콤과 ICT 투자를 맡는 신설법인 SK스퀘어로 인적분할을 단행하는 안건을 의결한 바 있다.
+
+SK스퀘어는 박정호 현 SK텔레콤 대표이자 SK하이닉스 부회장이 이끈다. 박 CEO가 국내외 반도체 시장에서 공격적인 투자에 나설 것으로 기대된다. 윤풍영 현 SK텔레콤 최고재무책임자(CFO)도 SK스퀘어로 자리를 옮겨 최고투자책임자(CIO) 역할을 한다.
+
+SK스퀘어는 지금까지 반도체, ICT 플랫폼 사업 투자를 통해 축적된 투자 성공 DNA를 바탕으로 현재 26조원인 순자산가치를 2025년 약 3배에 달하는 75조원으로 키운다는 목표다.
+
+
+SK스퀘어 밑에는 SK하이닉스, SK쉴더스(전 ADT캡스), 11번가, 티맵모빌리티, 원스토어, 콘텐츠웨이브, 드림어스컴퍼니, SK플래닛, FSK L&S, 인크로스, 나노엔텍, 스파크플러스, SK텔레콤CST1, SK텔레콤TMT 인베스트먼트, IDQ, 테크메이커 등 16개사가 편제된다.
+
+SK텔레콤 사명을 계승하는 존속법인은 유영상 이동통신사업 대표가 수장 역할을 한다. 지난해 15조원이었던 매출은 오는 2025년 22조원으로 목표를 설정했다.
+
+앞으로 SK텔레콤은 주력인 유무선 통신과 함께 인공지능(AI) 기반 구독사업과 메타버스 플랫폼 등 신사업 고도화에 역량을 집중할 계획이다.
+
+산하에는 SK브로드밴드·SK텔링크·피에스앤마케팅·F&U신용정보·서비스탑·서비스에이스·SK오앤에스 등 7개 회사를 편제했다.
+
+
+이번 개편으로 통신과 비통신 사업을 나눠 기업구조를 효율화할 것으로 예상된다. 동시에 저평가된 것으로 여겨지는 기업가치를 제고할 것으로 기대된다. 또 공정거래법에 따른 규제로 투자 확대에 제한을 받아온 SK하이닉스의 투자 여건을 개선할 것으로 관측되고 있다.  
+    </div>
+
+    <br><br><hr>
+    <h2>background-clip</h2>
+    <div class="div-clip" id="div-clip1">
+        SK텔레콤이 통신사업을 하는 'SK텔레콤'과 반도체 및 정보통신기술(ICT) 투자를 맡는 'SK스퀘어'로 분할해 1일 새롭게 출범한다. 1984년 한국이동통신으로 설립된 지 37년 만에 이뤄지는 역사적인 기업구조 재편이다.
+
+1일 통신업계에 따르면 SK텔레콤은 이날 이사회를 열고 존속법인 SK텔레콤과 신설법인 SK스퀘어의 새 최고경영자를 선임한다.
+
+앞서 SK텔레콤은 지난달 임시 주주총회에서 통신 분야를 맡는 존속법인 SK텔레콤과 ICT 투자를 맡는 신설법인 SK스퀘어로 인적분할을 단행하는 안건을 의결한 바 있다.
+
+SK스퀘어는 박정호 현 SK텔레콤 대표이자 SK하이닉스 부회장이 이끈다. 박 CEO가 국내외 반도체 시장에서 공격적인 투자에 나설 것으로 기대된다. 윤풍영 현 SK텔레콤 최고재무책임자(CFO)도 SK스퀘어로 자리를 옮겨 최고투자책임자(CIO) 역할을 한다.
+
+SK스퀘어는 지금까지 반도체, ICT 플랫폼 사업 투자를 통해 축적된 투자 성공 DNA를 바탕으로 현재 26조원인 순자산가치를 2025년 약 3배에 달하는 75조원으로 키운다는 목표다.
+
+
+SK스퀘어 밑에는 SK하이닉스, SK쉴더스(전 ADT캡스), 11번가, 티맵모빌리티, 원스토어, 콘텐츠웨이브, 드림어스컴퍼니, SK플래닛, FSK L&S, 인크로스, 나노엔텍, 스파크플러스, SK텔레콤CST1, SK텔레콤TMT 인베스트먼트, IDQ, 테크메이커 등 16개사가 편제된다.
+
+SK텔레콤 사명을 계승하는 존속법인은 유영상 이동통신사업 대표가 수장 역할을 한다. 지난해 15조원이었던 매출은 오는 2025년 22조원으로 목표를 설정했다.
+
+앞으로 SK텔레콤은 주력인 유무선 통신과 함께 인공지능(AI) 기반 구독사업과 메타버스 플랫폼 등 신사업 고도화에 역량을 집중할 계획이다.
+
+산하에는 SK브로드밴드·SK텔링크·피에스앤마케팅·F&U신용정보·서비스탑·서비스에이스·SK오앤에스 등 7개 회사를 편제했다.
+
+
+이번 개편으로 통신과 비통신 사업을 나눠 기업구조를 효율화할 것으로 예상된다. 동시에 저평가된 것으로 여겨지는 기업가치를 제고할 것으로 기대된다. 또 공정거래법에 따른 규제로 투자 확대에 제한을 받아온 SK하이닉스의 투자 여건을 개선할 것으로 관측되고 있다.  
+    </div>
+
+    <div class="div-clip" id="div-clip2">
+        SK텔레콤이 통신사업을 하는 'SK텔레콤'과 반도체 및 정보통신기술(ICT) 투자를 맡는 'SK스퀘어'로 분할해 1일 새롭게 출범한다. 1984년 한국이동통신으로 설립된 지 37년 만에 이뤄지는 역사적인 기업구조 재편이다.
+
+1일 통신업계에 따르면 SK텔레콤은 이날 이사회를 열고 존속법인 SK텔레콤과 신설법인 SK스퀘어의 새 최고경영자를 선임한다.
+
+앞서 SK텔레콤은 지난달 임시 주주총회에서 통신 분야를 맡는 존속법인 SK텔레콤과 ICT 투자를 맡는 신설법인 SK스퀘어로 인적분할을 단행하는 안건을 의결한 바 있다.
+
+SK스퀘어는 박정호 현 SK텔레콤 대표이자 SK하이닉스 부회장이 이끈다. 박 CEO가 국내외 반도체 시장에서 공격적인 투자에 나설 것으로 기대된다. 윤풍영 현 SK텔레콤 최고재무책임자(CFO)도 SK스퀘어로 자리를 옮겨 최고투자책임자(CIO) 역할을 한다.
+
+SK스퀘어는 지금까지 반도체, ICT 플랫폼 사업 투자를 통해 축적된 투자 성공 DNA를 바탕으로 현재 26조원인 순자산가치를 2025년 약 3배에 달하는 75조원으로 키운다는 목표다.
+
+
+SK스퀘어 밑에는 SK하이닉스, SK쉴더스(전 ADT캡스), 11번가, 티맵모빌리티, 원스토어, 콘텐츠웨이브, 드림어스컴퍼니, SK플래닛, FSK L&S, 인크로스, 나노엔텍, 스파크플러스, SK텔레콤CST1, SK텔레콤TMT 인베스트먼트, IDQ, 테크메이커 등 16개사가 편제된다.
+
+SK텔레콤 사명을 계승하는 존속법인은 유영상 이동통신사업 대표가 수장 역할을 한다. 지난해 15조원이었던 매출은 오는 2025년 22조원으로 목표를 설정했다.
+
+앞으로 SK텔레콤은 주력인 유무선 통신과 함께 인공지능(AI) 기반 구독사업과 메타버스 플랫폼 등 신사업 고도화에 역량을 집중할 계획이다.
+
+산하에는 SK브로드밴드·SK텔링크·피에스앤마케팅·F&U신용정보·서비스탑·서비스에이스·SK오앤에스 등 7개 회사를 편제했다.
+
+
+이번 개편으로 통신과 비통신 사업을 나눠 기업구조를 효율화할 것으로 예상된다. 동시에 저평가된 것으로 여겨지는 기업가치를 제고할 것으로 기대된다. 또 공정거래법에 따른 규제로 투자 확대에 제한을 받아온 SK하이닉스의 투자 여건을 개선할 것으로 관측되고 있다.  
+    </div>
+
+    <div class="div-clip" id="div-clip3">
+        SK텔레콤이 통신사업을 하는 'SK텔레콤'과 반도체 및 정보통신기술(ICT) 투자를 맡는 'SK스퀘어'로 분할해 1일 새롭게 출범한다. 1984년 한국이동통신으로 설립된 지 37년 만에 이뤄지는 역사적인 기업구조 재편이다.
+
+1일 통신업계에 따르면 SK텔레콤은 이날 이사회를 열고 존속법인 SK텔레콤과 신설법인 SK스퀘어의 새 최고경영자를 선임한다.
+
+앞서 SK텔레콤은 지난달 임시 주주총회에서 통신 분야를 맡는 존속법인 SK텔레콤과 ICT 투자를 맡는 신설법인 SK스퀘어로 인적분할을 단행하는 안건을 의결한 바 있다.
+
+SK스퀘어는 박정호 현 SK텔레콤 대표이자 SK하이닉스 부회장이 이끈다. 박 CEO가 국내외 반도체 시장에서 공격적인 투자에 나설 것으로 기대된다. 윤풍영 현 SK텔레콤 최고재무책임자(CFO)도 SK스퀘어로 자리를 옮겨 최고투자책임자(CIO) 역할을 한다.
+
+SK스퀘어는 지금까지 반도체, ICT 플랫폼 사업 투자를 통해 축적된 투자 성공 DNA를 바탕으로 현재 26조원인 순자산가치를 2025년 약 3배에 달하는 75조원으로 키운다는 목표다.
+
+
+SK스퀘어 밑에는 SK하이닉스, SK쉴더스(전 ADT캡스), 11번가, 티맵모빌리티, 원스토어, 콘텐츠웨이브, 드림어스컴퍼니, SK플래닛, FSK L&S, 인크로스, 나노엔텍, 스파크플러스, SK텔레콤CST1, SK텔레콤TMT 인베스트먼트, IDQ, 테크메이커 등 16개사가 편제된다.
+
+SK텔레콤 사명을 계승하는 존속법인은 유영상 이동통신사업 대표가 수장 역할을 한다. 지난해 15조원이었던 매출은 오는 2025년 22조원으로 목표를 설정했다.
+
+앞으로 SK텔레콤은 주력인 유무선 통신과 함께 인공지능(AI) 기반 구독사업과 메타버스 플랫폼 등 신사업 고도화에 역량을 집중할 계획이다.
+
+산하에는 SK브로드밴드·SK텔링크·피에스앤마케팅·F&U신용정보·서비스탑·서비스에이스·SK오앤에스 등 7개 회사를 편제했다.
+
+
+이번 개편으로 통신과 비통신 사업을 나눠 기업구조를 효율화할 것으로 예상된다. 동시에 저평가된 것으로 여겨지는 기업가치를 제고할 것으로 기대된다. 또 공정거래법에 따른 규제로 투자 확대에 제한을 받아온 SK하이닉스의 투자 여건을 개선할 것으로 관측되고 있다.  
+    </div>
+    <br><br><br><br>
+    <hr>
+
+    <h2>
+        background-image,
+        background-repeat,
+        background-position,
+        background-origin
+        background-attachiment
+    </h2>
+
+    <div id="div-bg-img"></div>
+    <br><br><br><br><br><br><br><br> 
+    <br><br><br><br><br><br><br><br> 
+    <br><br><br><br><br><br><br><br> 
+    <br><br><br><br><br><br><br><br> 
+    <br><br><br><br><br><br><br><br> 
+    <br><br><br><br><br><br><br><br> 
+
+
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+.trans-test {
+  width: 350px;
+  height: 250px;
+  margin-left: 50px;
+}
+
+/* 2차원 변형 */
+
+#trans2-1:hover {
+  -webkit-transform: translate(50px, 50px);
+  -ms-transform: translateX(50px);
+  /* 아직 표준이 안된 css표준을 사용하는중이야! */
+  transform: translateX(50px);
+  /* 나는 표준사용하고 있는데? 하면 이거 씀 */
+}
+
+#trans2-2:hover {
+  transform: translateY(-50px);
+  /* 양수, 음수 다 사용 가능하다.  */
+}
+
+#trans2-3:hover {
+  /* 두가지 방법이 있음(transform에 적기, x축 y축 따로 적기) */
+  transform: translate(50px, 50px);
+  transform: translateX(50px) translateY(50px);
+}
+
+#trans2-4:hover {
+  /* transform: scaleX(-1); 좌우반전된다.  */
+  /* 1보다 크면 확대, 0~1사이는 축소, -(음수일 경우)는 좌우반전으로 확대 */
+  transform: scaleX(0.8);
+}
+
+#trans2-5:hover {
+  /* transform: scaleX(-1); 좌우반전된다.  */
+  /* 1보다 크면 확대, 0~1사이는 축소, -(음수일 경우)는 좌우반전으로 확대 */
+  transform: scaleY(0.8);
+}
+
+#trans2-6:hover {
+  /* transform: scaleX(-1); 좌우반전된다.  */
+  /* 1보다 크면 확대, 0~1사이는 축소, -(음수일 경우)는 좌우반전으로 확대 */
+  transform: scale(-0.7);
+}
+
+#trans2-7:hover {
+  transform: rotate(-45deg);
+}
+
+#trans2-8:hover {
+  transform: skewX(-20deg);
+}
+
+#trans2-9:hover {
+  transform: skewY(20deg);
+}
+
+#trans2-10:hover {
+  /* transform: skew(10deg, 10deg); */
+  transform: skewX(10deg) skewY(10deg);
+}
+
+/* 3차원 변형 테스트 */
+#trans3-1:hover {
+  transform: perspective(101px) translate3d(100px, 100px, -100px);
+}
+
+#trans3-2:hover {
+  transform: perspective(1000px) translateZ(-100px);
+}
+
+#trans3-3:hover {
+  transform: perspective(300px) rotateX(30deg);
+}
+
+#trans3-4:hover {
+  transform: perspective(300px) rotatey(-110deg);
+}
+
+#trans3-5:hover {
+  transform: perspective(300px) rotateZ(30deg);
+}
+
+#trans3-6:hover {
+  transform: perspective(300px) rotate3d(1, 1, 1, -100deg);
+}
+
+#left-top:hover {
+  /* transform-origin: 30px 100px; */
+  transform-origin: left top;
+  transform: rotate(25deg);
+}
+
+#right-top:hover {
+  transform-origin: right top;
+  transform: rotate(25deg);
+}
+
+#left-bottom:hover {
+  transform-origin: left bottom;
+  transform: rotate(25deg);
+}
+
+#right-bottom:hover {
+  transform-origin: right bottom;
+  transform: rotate(25deg);
+}
+
+#back1:hover {
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+}
+
+#back2:hover {
+  transform: rotateX(180deg);
+  backface-visibility: visible;
+  /* visible이 기본속성임 */
+}

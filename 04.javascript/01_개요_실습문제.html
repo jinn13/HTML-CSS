@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개요 실습 문제</title>
+    <style>
+        .div-test{
+            border: 1px solid;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+
+        #area{
+            border: 1px solid;
+            width: 300px;
+            height: 200px;
+            margin-top: 5px;
+        }
+
+        #area1{
+            border: 1px solid;
+            width: 500px;
+            height: 400px;
+            margin-top: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>개요 실습 문제</h1>
+
+    <hr>
+
+    <h2>문제1. 색상 조절하기</h2>
+    <p>색상 선택 후 변경 버튼을 클릭하면 색상이 변경되도록 만들기</p>
+
+    <div class="div-test" id="test1"></div>
+
+    <input type="color" id="color1">
+    <button onclick="chgcolor();">변경</button>
+
+    <script>
+        function chgcolor(){
+            var test1=document.getElementById('test1');
+            var color=document.getElementById('color1');
+            console.log(test1);
+            console.log(color1.value);
+            test1.style.backgroundColor=color1.value;
+        }
+    </script>
+
+
+    <br><br><br><hr>
+    <h2>문제2. 크기 변경하기</h2>
+    <p>버튼에 따라 크기 조절이 가능하도록 만들기</p>
+    <div class="div-test" id="test2"></div>
+    <button id="50" onclick="transform50()">50x50</button>
+    <button id="100" onclick="transform100()">원본(100x100)</button>
+    <button id="200" onclick="transform200()">200x200</button>
+
+    <script>
+        function transform50(){
+            var chgsize = document.getElementById('test2');
+            var boxsize = document.getElementById('50');
+            console.log(chgsize);
+            console.log(boxsize);
+            test2.style.width="50px";
+            test2.style.height="50px";
+        }
+
+        function transform100(){
+            var chgsize = document.getElementById('test2');
+            var boxsize = document.getElementById('100');
+            console.log(chgsize);
+            console.log(boxsize);
+            test2.style.width="100px";
+            test2.style.height="100px";
+        }
+
+        function transform200(){
+            var chgsize = document.getElementById('test2');
+            var boxsize = document.getElementById('200');
+            console.log(chgsize);
+            console.log(boxsize);
+            test2.style.width="200px";
+            test2.style.height="200px";
+        }
+
+            for (let index=0; index < boxsize.length; index++){
+                console.log(boxsize[index]);
+
+                if(boxsize[index].value=="50"){
+                    console.log(boxsize[index]);
+                    test2.style.width="50px";
+                    test2.style.height="50px";
+                }else if(boxsize[index].value=="100"){
+                    console.log(boxsize[index]);
+                    test2.style.width="100px";
+                    test2.style.height="100px";
+                }else if(boxsize[index].value=="200"){
+                    console.log(boxsize[index]);
+                    test2.style.width="200px";
+                    test2.style.height="2000px";
+                }
+            }
+
+    </script>
+
+
+
+    <br><br><br><hr>
+    <h2>문제3. HTML 태그에 접근</h2>
+    <p>텍스트 박스로 입력받은 데이터를 가져와서 출력하기</p>
+
+    <form>
+    <label>구매자 : <input type="text" id="bName" placeholder="구매자의 이름을 입력하세요."></label><br><br>
+    <label>상품명 : <input type="text" id="pName" placeholder="상품명을 입력하세요."></label><br><br>
+    <label>가격 :   <input type="text" id="price" placeholder="구매 가격을 입력하세요. "></label><br><br>
+    <input type="button" value="입력값 출력하기" onclick="print1();">
+    <!-- <button onclick="print1();">입력값 출력하기</button> -->
+    </form>
+    
+    <div id="area"></div>
+
+    <script>
+        function print1(){
+            var input1=document.getElementById('bName');
+            var bName=input1.value;
+
+            var input2=document.getElementById('pName');
+            var pName=input2.value;
+
+            var input3=document.getElementById('price');
+            var price=input3.value;
+
+
+            document.getElementById('area').innerHTML+='구매자 : '+bName+'<br>';
+            input1.value='';
+            input1.focus();
+
+            document.getElementById('area').innerHTML+='상품명 : '+pName+'<br>';
+            input2.value='';
+
+            document.getElementById('area').innerHTML+='가격 : '+price+'<br>';
+            input3.value='';
+        }
+    </script>
+
+
+    <br><br><br><hr>
+    <h2>문제4. 테이블 만들기</h2>
+    <p>
+        prompt()로 사용자로부터 행과 열의 개수를 입력받아 테이블 만들기
+        아래에 div태그에 innerHTML속성을 사용해서 만들어진 테이블을 포함한다. 
+    </p>
+    
+    <button onclick="createTable()">테이블 생성</button>
+    <div id=area1></div>
+
+    <script>
+        function createTable(){
+            let row=prompt('테이블의 행을 입력하세요.');
+            console.log(row);
+            let column=prompt('테이블의 열을 입력하세요.');
+            console.log(column);
+            
+            document.getElementById('area1').innerHTML+='행 : '+row+'<br>';
+            document.getElementById('area1').innerHTML+='열 : '+column+'<br>';
+
+            let table="";
+            document.getElementById('area1').innerHTML+=table;
+
+            table+="<table border='1px;'>";
+            for (var i = 0; i < row; i++) {
+                table+="<tr height='50px'>";
+                for (var j = 0; j < column; j++) {
+                    table+="<td width='50px'>";
+                }
+            }
+            table+="</td>";
+            table+="</tr>";
+            table+="</table>";
+
+
+            document.getElementById('area1').innerHTML+=table;
+
+
+
+
+
+
+
+            // document.write("<table border='1px;'>")
+            // for (var i = 0; i < row; i++) {
+            //     document.write("<tr height='50px'>");
+            //     for (var j = 0; j < column; j++) {
+            //         document.write("<td width='50px'>");
+            //     }
+            // }
+            // document.write("</td>")
+            // document.write("</tr>")
+            // document.write("</table>")
+
+            // document.getElementById('area1').write("<table>")
+            //     for(var i=0;i<row.length; i++){
+            //         document.write("<tr height='50px'>");
+            //         for(var j=0;j<column;j++){
+            //             document.write("<td width='50px'>");
+            //         }
+            //     }
+
+            //     document.getElementById('area1').write("</td>")
+            //     document.getElementById('area1').write("</tr>")
+            //     document.getElementById('area1').write("</table>")
+        }
+    </script>
+
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+</body>
+</html>
